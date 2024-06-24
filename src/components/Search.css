@@ -1,0 +1,26 @@
+.Search-container{
+    display: flex;
+    /* border: 1px solid; */
+    margin-top: 20px;
+    justify-content: flex-start;
+    gap: 15px;
+}
+.Search-container  h4{
+    margin-left: 20px;
+    font-weight: 400;
+}
+.Search-container button{
+    text-align: start;
+    width: 650px;
+    padding: 18px;
+    margin-left: 20px;
+    outline: none;
+    
+    border-radius: 10px;
+    margin-top: 10px;
+    border: 1px solid gray;
+}
+.Tags button{
+    padding: 14px;
+
+}

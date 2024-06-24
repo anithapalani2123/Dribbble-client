@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.Tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 15px;
+  margin-left: 60px;
+  width: 100%;
+}
+
+.NavSection3 {
+  width: 20%;
+  margin-left: 30px;
+}
+
+.navSection {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 20px;
+  width: 100%;
+}
+
+.NavSection1 {
+  width: 20%;
+  margin-top: 10px;
+  position: relative;
+}
+
+.NavSection1 select {
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(143, 141, 141);
+  outline: none;
+  background-color: white;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.NavSection1::after {
+  content: '▾';
+  font-size: 16px;
+  color: rgb(143, 141, 141);
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+option {
+  padding: 10px;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.NavSection2-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.NavSection2 {
+  display: flex;
+  gap: 10px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.NavSection2.mobile {
+  overflow-x: auto;
+}
+
+.list a {
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  border: none;
+  height: fit-content;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 20px;
+  color: black;
+}
+
+.list a:hover {
+  color: rgb(126, 123, 123);
+  cursor: pointer;
+}
+.iconStyle{
+  width: 10px;
+}
+
+#filter {
+  padding: 8px 20px;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 0px 0px 1px 1px rgb(164, 161, 161);
+  border: none;
+  background-color: white;
+  margin-top: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.scroll-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: fit-content;
+}
+
+.card-container {
+  position: relative;
+  margin: 20px;
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 310px;
+  border-radius: 8px;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 310px;
+  height: 87%;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 10px;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.overlay-title {
+  font-size: 17px;
+  margin-bottom: 10px;
+  background: transparent;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.icons {
+  display: flex;
+  background: transparent;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 10px;
+}
+
+.count {
+  display: flex;
+  gap: 2px;
+}
+
+#likes {
+  display: flex;
+  gap: 3.5px;
+  margin-top: 5px;
+}
+
+#views {
+  display: flex;
+}
+
+#views h5 {
+  margin-top: 4px;
+}
+
+.like {
+  background-color: transparent;
+}
+
+@media (max-width: 1200px) {
+  .scroll-button {
+    display: block;
+  }
+
+  .NavSection2.mobile {
+    overflow-x: auto;
+  }
+
+  .NavSection2-wrapper {
+    overflow: hidden;
+  }
+
+  .NavSection2 {
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .list {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
+
+  .NavSection2::-webkit-scrollbar {
+    display: none;
+  }
+
+  .NavSection2 {
+    scrollbar-width: none;
+  }
+}
+
+@media (min-width: 1201px) {
+  .scroll-button {
+    display: none;
+  }
+
+  .NavSection2 {
+    overflow-x: visible;
+  }
+
+  .NavSection2-wrapper {
+    overflow: visible;
+  }
+}
+
