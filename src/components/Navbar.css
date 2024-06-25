@@ -154,6 +154,7 @@
     }
 
     .header .section2 {
-        align-content: center;
+        margin-left: 150px;
+        
     }
 }
