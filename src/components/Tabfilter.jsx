@@ -6,6 +6,8 @@ import heart from '../assets/heart.png';
 import views from '../assets/eye.png';
 import { Heart, Bookmark } from 'lucide-react';
 import Search from './Search';
+import { ChevronRight } from 'lucide-react';
+import { ChevronLeft } from 'lucide-react';
 
 const Tabfilter = () => {
   const { name } = useParams();
@@ -131,7 +133,7 @@ const Tabfilter = () => {
         </div>
 
         <div className='NavSection2-wrapper'>
-          {isMobile && <button className='scroll-button' onClick={scrollLeft}>{'<'}</button>}
+          {isMobile && <button className='scroll-button' onClick={scrollLeft}><ChevronLeft /></button>}
           <div className={`NavSection2 ${isMobile ? 'mobile' : ''}`} ref={NavSection2Ref}>
             {categories.map(category => (
               <h4 className='list' key={category.name}>
@@ -139,7 +141,7 @@ const Tabfilter = () => {
               </h4>
             ))}
           </div>
-          {isMobile && <button className='scroll-button' onClick={scrollRight}>{'>'}</button>}
+          {isMobile && <button className='scroll-button' onClick={scrollRight}><ChevronRight /></button>}
         </div>
 
         <div className='NavSection3'>
@@ -163,9 +165,9 @@ const Tabfilter = () => {
                   </div>
                 </div>
                 <div className='details'>
-                  <div style={{display:"flex"}}>
+                  <div style={{display:"flex",gap:"2px"}}>
                     <img src={card.image_url} alt="icon" style={{width:"20px",height:"20px",borderRadius:"30px"}}/>
-                    <h3 style={{ fontSize: '14px' }}>{card.title}</h3>
+                    <h3 style={{ fontSize: '14px' ,fontWeight:"400"}}>{card.title}</h3>
 
                   </div>
                   <div className='count'>
