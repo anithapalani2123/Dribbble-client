@@ -6,7 +6,7 @@
 }
 
 .Footer{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: center;
     gap: 70px;
@@ -45,8 +45,8 @@
 
 @media (max-width: 1200px){
     .Footer{
-        /* width: fit-content; */
         flex-direction: column;
+        margin-left: 10px;
         gap: 10px;
         justify-content: center;
         align-items: center;
