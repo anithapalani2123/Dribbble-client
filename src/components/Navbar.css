@@ -16,7 +16,7 @@
     gap: 30px;
     margin-left: 50px;
     margin-top: 40px;
-    position: relative; /* Added to position the dropdown */
+    position: relative; 
 }
 
 .section1 h3 {
@@ -27,25 +27,25 @@
 }
 
 #findDesigner, #Courses {
-    position: relative; /* Added to position the dropdown */
+    position: relative; 
 }
 
 #findDesigner:hover, #Courses:hover {
     cursor: pointer;
 }
 
-/* Dropdown menu styling */
+
 .dropdown {
     position: absolute;
-    top: 40px; /* Adjust this value as needed */
+    top: 40px; 
     background-color: #fff;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     padding: 25px;
     z-index: 1000;
     border-radius: 10px;
-    display: none; /* Hide dropdown by default */
-    width: max-content; /* Adjust the width as needed */
+    display: none; 
+    width: max-content; 
 }
 
 .dropdown .item {
@@ -70,7 +70,7 @@
     background-color: #f0f0f0;
 }
 
-/* Show dropdown when hovering over #findDesigner or #Courses */
+
 #findDesigner:hover .dropdown, #Courses:hover .dropdown {
     display: block;
 }
@@ -96,6 +96,7 @@
 }
 
 .section3 button{
+    display: flex;
     width: 250px;
     height: 50px;
     padding: 10px;
@@ -109,7 +110,7 @@
 }
 .section3 span{
     margin-left: 10px;
-    /* margin-top: -10px; */
+    margin-top: 4px;
     color: gray;
     background-color: transparent;
 }
