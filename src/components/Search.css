@@ -3,19 +3,22 @@
     /* border: 1px solid; */
     margin-top: 20px;
     justify-content: flex-start;
+    margin-left: auto;
+    margin-right: auto;
     gap: 15px;
 }
 .Search-container  h4{
-    margin-left: 20px;
+    margin-left: auto;
     font-weight: 400;
+    margin-right: auto;
 }
 .Search-container button{
     text-align: start;
     width: 650px;
     padding: 18px;
-    margin-left: 20px;
+    margin-left: auto;
     outline: none;
-    
+    margin-right: auto;
     border-radius: 10px;
     margin-top: 10px;
     border: 1px solid gray;
@@ -23,4 +26,49 @@
 .Tags button{
     padding: 14px;
 
+}
+@media (max-width:1200px) {
+    .Search-container{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    
+}
+@media (max-width:690px) {
+    .Search-container{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .Search-container button{
+        width: 400px;
+    }
+    
+}
+@media (max-width:400px) {
+    .Search-container{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .Search-container button{
+        width: 300px;
+    }
+    
+}
+@media (max-width:320px) {
+    .Search-container{
+        flex-direction: column;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    .Search-container button{
+        width: 200px;
+    }
+    
 }
