@@ -14,25 +14,21 @@ body, html {
   flex-direction: column;
   justify-content: space-around;
   margin-top: 15px;
-  margin-left: 60px;
-  width: 100%;
 }
 
-.NavSection3 {
-  width: 20%;
-  margin-left: 30px;
-}
 
 .navSection {
   display: flex;
+  justify-content: space-around;
   margin-top: 15px;
-  margin-left: 20px;
-  width: 100%;
+  margin-bottom: 5px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .NavSection1 {
-  width: 20%;
-  margin-top: 10px;
+  /* width: 20%; */
+  margin-top:8px;
   position: relative;
 }
 
@@ -73,7 +69,7 @@ option {
   align-items: center;
   margin-top: 0px;
   overflow: hidden;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .NavSection2 {
@@ -131,13 +127,17 @@ option {
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  width: fit-content;
+  justify-content: center;
+  margin-left: 40px;
+  margin-right: 40px;
+  /* border: 1px solid; */
+  /* width: min-content; */
 }
 
 .card-container {
   position: relative;
   margin: 20px;
+  margin-left: 23px;
   transition: transform 0.3s ease;
 }
 
@@ -191,8 +191,9 @@ option {
 
 .details {
   display: flex;
-  justify-content: center;
-  gap: 60px;
+  justify-content: space-between;
+  /* justify-content: center;
+  gap: 60px; */
   margin-top: 10px;
 }
 
@@ -219,7 +220,10 @@ option {
   background-color: transparent;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1350px) {
+  .Tab{
+    margin-left: 15px;
+  }
   .scroll-button {
     display: block;
   }
@@ -229,7 +233,19 @@ option {
   }
 
   .NavSection2-wrapper {
+    order: 3;
     overflow: hidden;
+    margin-top: 10px;
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .card img {
+    width: 300px;
   }
 
   .NavSection2 {
@@ -250,9 +266,22 @@ option {
   .NavSection2::-webkit-scrollbar {
     display: none;
   }
+  .navSection{
+    margin-left: 10px;
+    flex-wrap: wrap;
+    
+  }
 
   .NavSection2 {
     scrollbar-width: none;
+  }
+  .NavSection1{
+    order: 1;
+    margin-left: 10px;
+  }
+  .NavSection3{
+    order: 2;
+
   }
 }
 
@@ -268,5 +297,140 @@ option {
   .NavSection2-wrapper {
     overflow: visible;
   }
+
 }
 
+@media (max-width: 480px) {
+  .Tab{
+    margin-left: 15px;
+  }
+  .scroll-button {
+    display: block;
+  }
+
+  .NavSection2.mobile {
+    overflow-x: auto;
+  }
+
+  .NavSection2-wrapper {
+    order: 3;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .card img {
+    width: 400px;
+  }
+
+  .NavSection2 {
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .list {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
+
+  .NavSection2::-webkit-scrollbar {
+    display: none;
+  }
+  .navSection{
+    margin-left: 10px;
+    flex-wrap: wrap;
+    
+  }
+
+  .NavSection2 {
+    scrollbar-width: none;
+  }
+  .NavSection1{
+    order: 1;
+    margin-left: 10px;
+  }
+  .NavSection3{
+    order: 2;
+
+  }
+}
+
+@media (max-width: 420px) {
+  .Tab{
+    margin-left: 15px;
+  }
+  .scroll-button {
+    display: block;
+  }
+
+  .NavSection2.mobile {
+    overflow-x: auto;
+  }
+
+  .NavSection2-wrapper {
+    order: 3;
+    overflow: hidden;
+    margin-top: 10px;
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  .card img {
+    width: 300px;
+  }
+
+  .NavSection2 {
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  .list {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    white-space: nowrap;
+  }
+
+  .NavSection2::-webkit-scrollbar {
+    display: none;
+  }
+  .navSection{
+    margin-left: 10px;
+    flex-wrap: wrap;
+    
+  }
+
+  .NavSection2 {
+    scrollbar-width: none;
+  }
+  .NavSection1{
+    order: 1;
+    margin-left: 10px;
+  }
+  .NavSection3{
+    order: 2;
+
+  }
+}
+
+
+  
+
+  
